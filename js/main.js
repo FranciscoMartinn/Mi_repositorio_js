@@ -1,4 +1,4 @@
-let edad = prompt("Ingresa tu edad")
+let edad = prompt("Ingresa tu edad");
 
 if (edad <= 10) {
     console.log("Sos un nene, no podes ingresar, vete a jugar!");
