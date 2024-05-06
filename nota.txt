@@ -1,0 +1,221 @@
+/*---CLASE 1---*/
+
+// let apodo;
+// const apellido = "Martin" // String / cadena de texto
+// const anioNacimiento = 2002; // Number / numero
+
+//? Asignacion
+
+// declarar
+
+// let nombre;
+// let apellido;
+// let edad;
+
+// //asignar
+
+// nombre = "Francisco";
+// apellido = "Martin";
+// edad = 21;
+
+// //declarar y asignar al mismo tiempo
+
+// let nombre = "Francisco";
+// let apellido = "Martin";
+// let edad = 21:
+
+// //? operaciones basicas
+
+// let numero1 = 4;
+// let numero2 = 2;
+
+// let resultadoSuma = numero1 + numero2;
+// let resultadoResta = numero1 - numero2;
+// let resultadoMultiplicacion = numero1 * numero2;
+// let resultadoDivision = numero1 / numero2;
+
+// //? prompt
+
+// let nombreIngresado = prompt ("Ingresa tu nombre")
+
+// //? console.log
+
+// console.log("Hola, munod!")
+
+// let nombre = "Kelo"
+// console.log (nombre)
+
+// let numero1 = 4;
+// let numero2 = 2;
+// let resultadoSuma = numero1 + numero2;
+
+// console.log(resultadoSuma)
+
+// let saludo = "Hola";
+// let nombre = prompt("Ingresa tu nombre");
+// let saludoCompleto = saludo + " " + nombre;
+
+// console.log(saludoCompleto)
+
+// alert(saludoCompleto)
+
+
+/*---CLASE 2---*/
+
+
+//*    ==    Es igual 
+//*    !=    Es distinto
+//*    <     Es menor
+//*    >     Es mayor
+//*    <=    Es menor o igual
+//*    >=    Es mayor o igual
+//*    ===   Es estrictamente igual
+//*    !==   Es estrictamente distinto
+
+//*    && AND
+//*    || OR
+//*     ! NOT
+
+//? condicional
+
+// let edad = prompt("Ingresa tu edad")
+
+// if (edad <= 18){
+//     console.log("Podes entrar")
+// } else {
+//     console.log("No podes entrar sos menor de edad")
+// }
+
+// console.log(edad)
+
+
+// let edad = prompt("Ingresa tu edad")
+
+// if (edad < 14){
+//     console.log("Sos un nene");
+// } else if (edad < 18){
+//     console.log("Sos un adolecente");
+// } else if ( edad < 25){
+//     console.log("Sos un aduldto joven");
+// } else if (edad < 40){
+//     console.log("Sos un dulto un poquito menos joven");
+// }else {
+//     console.log("Sos viejito");
+// }
+
+
+// let numero1 = 3
+// let numero2 = 3
+
+// if (numero1 != numero2){
+//     console.log("Verdadero")
+// } else {
+//     console.log("Falso")
+// }
+
+//! OPERADOES AND OR NOT
+
+// let nombre = prompt("Ingresa su nombre")
+// let apellido = prompt("Ingresa su apellido")
+
+// if (nombre !== "" && apellido !== ""){
+//     console.log(nombre + " " + apellido);
+// }else {
+//     console.log("Nombre o apellido inavlidos");
+// }
+
+// let nombre = prompt("Ingresa su nombre")
+
+// if (nombre === "ana" || nombre === "ANA" || nombre === "Ana"){
+//     console.log("Podes ingresar Anita");
+// }else {
+//     console.log("No sos Ana. Fuera");
+// }
+
+
+// .toLowerCase()
+// .toUpperCase()
+
+// console.log("ANA".toLowerCase());
+// console.log("ana".toUpperCase());
+
+// let nombre = prompt("Ingresa su nombre").toLowerCase();
+
+// if (nombre === "ANA"){
+//     console.log("Podes ingresar Anita");
+// }else {
+//     console.log("No sos Ana. Fuera");
+// }
+
+// parseInt => convierte string a numero entero
+// parseFloat => convierte string a numero con decimales (si los tiene)
+
+// let edad = parseInt(prompt("Ingresa sus edad"));
+
+// if (edad >= 18){
+//     console.log("Bienvenido!")
+// }else {
+//     console.log("No sos bienvenidO")
+// }
+
+
+/*---CLASE 3---*/
+
+//? Ciclos e interacciones
+
+/*
+    ? ESTAS DOS LINEAS SON EXACTAMNETE IGUALES
+
+    x = x + 1;
+    x++;
+
+    x = x - 1;
+    x--;
+
+    x = x + 4;
+    x += 4;
+
+    x = x - 4;
+    x -= 4;
+
+*/
+
+
+//! for
+
+// let cantidadAlumnos = parseInt(prompt("Ingrese la cantidad de alumnos"));
+// for (let x =1; x <= cantidadAlumnos; x = x +1){
+//     let alumno = prompt("Ingrese el nombre del alumno");
+//     console.log(x + ": " + alumno);
+// }
+
+// let cantidadAlumnos = parseInt(prompt("Ingrese la cantidad de alumnos"));
+// for (let x =1; x <= cantidadAlumnos; x = x +1){
+//     let alumno = prompt("Ingrese el nombre del alumno");
+//     if (alumno === "salir") {
+//         break
+//     }
+//     console.log(x + ": " + alumno);
+// }
+
+
+
+//! while
+
+// let x = 0;
+// while (x < 5){
+//     console.log(x + 1);
+//     x = x + 1;
+// }
+
+// let cantidadAlumnos = parseInt(prompt("Ingrese la cantidad de alumnos"));
+// let x = 1;
+// while (x <= cantidadAlumnos){
+//     let alumno = prompt("Ingrese el nombre del alumno");
+//     console.log(x + ": " + alumno);
+//     x = x + 1;
+// }
+
+
+//! do while
+

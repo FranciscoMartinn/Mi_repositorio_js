@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display= intercambiar');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #4e3716;
+}
+
+/*---HEADER---*/
+
+.hero{ 
+    height: 100vh;
+    background-image: url("../img/fondoHeader.jpg");
+}
+
+.hero__header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-inline: 2rem;
+}
+
+.hero__header .logo{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+}
+
+.header__rigth{
+    display: flex;
+    flex-direction: column;
+    align-items: flex end;
+    gap: 1rem;
+}
+
+.header__rigth p{
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.header__rigth .menu{
+    font-family: "Bebas Neue", sans-serif;
+    list-style: none;
+    display: flex;
+    font-size: 1.5rem;
+    gap: 2rem;
+    letter-spacing: 2px;
+}
+
+.hero__main{
+    display: flex;
+    padding-inline: 7rem;
+}
+
+.hero__main > div{
+    flex: 1;
+}
+
+.hero__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.hero__text h4{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    border: 2px dashed #4e3716;
+    width: max-content;
+    padding: .5rem;
+    padding-bottom: .4rem;
+    margin-bottom: 1rem;
+}
+
+.hero__text h2{
+    font-family: "Alfa Slab One", serif;
+    font-size: 6rem;
+    line-height: 1;
+    text-shadow: 6px 6px 0 white;
+}
+
+.hero__text h3{
+    font-family: "Alfa Slab One", serif;
+    font-size: 3rem;
+    text-shadow: 6px 6px 0 white;
+}
+
+.hero__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 3rem;
+    position: relative;
+}
+
+.hero__img img{
+    width: 800px;
+}
+
+.hero__img .sale{
+    position: absolute;
+    bottom: 5rem;
+    left: 5rem;
+    background-color: #af1616;
+    width: 100px;
+    height: 100px;
+    padding: 4.5rem;
+    border-radius: 50%;
+    border: 2px dashed white;
+    outline: 5px solid #af1616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+}
+
+.hero__img .sale .price {
+    color: white;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.hero__img .sale .price small{
+    color: white;
+    font-size: 2rem;
+}
+
+.hero__img .sale .only{
+    color: white;
+    font-size: 2.3rem;
+    line-height: 1;
+    letter-spacing: 2px;
+}
