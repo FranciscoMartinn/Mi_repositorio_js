@@ -29,3 +29,23 @@ while (x <= cantidadPizza) {
     console.log(x + ": " + pizza);
     x = x + 1;
 }
+
+const usuario1 = {
+    nombre: "Francisco",
+    apellido: "Martin",
+    edad: 21,
+    pais: "Argentina",
+    lenguajes: {
+        lenguaje1: "HTML",
+        lengujae2: "CSS",
+        lenguaje3: "JS",
+    }
+};
+
+//console.log(usuario1.edad);
+
+usuario1["edad"],
+console.log(usuario1.edad);
+
+usuario1.localidad = "General Alvear";
+console.log(usuario1);
