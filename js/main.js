@@ -1,3 +1,10 @@
+function saludar(nombre) {
+    console.log("Hola, " + nombre + "!");
+}
+
+let nombreIngresado = prompt ("Ingresa tu nombre");
+saludar(nombreIngresado);
+
 let edad = prompt("Ingresa tu edad");
 
 if (edad <= 10) {

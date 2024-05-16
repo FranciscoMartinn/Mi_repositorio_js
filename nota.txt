@@ -219,3 +219,26 @@
 
 //! do while
 
+/*---CLASE 5---*/
+
+//? Objetos
+
+// let nombre = "Kelo";
+// let apellido = "Martin";
+// let edad = 21;
+// let pais = "Argentina";
+
+// let usuario1 = {
+//     nombre: "Kelo",
+//     apellido: "Martin", 
+//     edad: 21,
+//     pais: "Argentina",
+//     lenguajes: {
+//         lenguaje1: "HTML",
+//         lenguaje2: "PHP",
+//         lenguaje3: "JS",
+//     }
+// };
+
+//console.log(usuario1.nombre)
+//console.log(usuario1["edad"])
