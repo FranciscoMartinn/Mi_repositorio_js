@@ -1,9 +1,13 @@
-function saludar(nombre) {
-    console.log("Hola, " + nombre + "!");
+// function saludar(nombre) {
+//     console.log("Hola, " + nombre + "!");
+// }
+const saludar = (nombre) => {
+    console.log ("Hola, " + nombre + "!")
 }
 
 let nombreIngresado = prompt ("Ingresa tu nombre");
 saludar(nombreIngresado);
+
 
 let edad = prompt("Ingresa tu edad");
 
