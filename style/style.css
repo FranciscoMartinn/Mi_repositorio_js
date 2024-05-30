@@ -9,35 +9,35 @@
 
 /*---HEADER---*/
 
-.hero{ 
+.hero {
     height: 100vh;
     background-image: url("../img/fondoHeader.jpg");
 }
 
-.hero__header{
+.hero__header {
     display: flex;
     justify-content: space-between;
     padding-top: 2rem;
     padding-inline: 2rem;
 }
 
-.hero__header .logo{
+.hero__header .logo {
     font-family: "Bebas Neue", sans-serif;
     font-size: 2rem;
 }
 
-.header__rigth{
+.header__rigth {
     display: flex;
     flex-direction: column;
     align-items: flex end;
     gap: 1rem;
 }
 
-.header__rigth p{
+.header__rigth p {
     font-family: "Roboto Condensed", sans-serif;
 }
 
-.header__rigth .menu{
+.header__rigth .menu {
     font-family: "Bebas Neue", sans-serif;
     list-style: none;
     display: flex;
@@ -46,22 +46,22 @@
     letter-spacing: 2px;
 }
 
-.hero__main{
+.hero__main {
     display: flex;
     padding-inline: 7rem;
 }
 
-.hero__main > div{
+.hero__main>div {
     flex: 1;
 }
 
-.hero__text{
+.hero__text {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.hero__text h4{
+.hero__text h4 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 300;
     font-size: 1.3rem;
@@ -72,20 +72,20 @@
     margin-bottom: 1rem;
 }
 
-.hero__text h2{
+.hero__text h2 {
     font-family: "Alfa Slab One", serif;
     font-size: 6rem;
     line-height: 1;
     text-shadow: 6px 6px 0 white;
 }
 
-.hero__text h3{
+.hero__text h3 {
     font-family: "Alfa Slab One", serif;
     font-size: 3rem;
     text-shadow: 6px 6px 0 white;
 }
 
-.hero__img{
+.hero__img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,11 +93,11 @@
     position: relative;
 }
 
-.hero__img img{
+.hero__img img {
     width: 800px;
 }
 
-.hero__img .sale{
+.hero__img .sale {
     position: absolute;
     bottom: 5rem;
     left: 5rem;
@@ -122,12 +122,12 @@
     line-height: 1;
 }
 
-.hero__img .sale .price small{
+.hero__img .sale .price small {
     color: white;
     font-size: 2rem;
 }
 
-.hero__img .sale .only{
+.hero__img .sale .only {
     color: white;
     font-size: 2.3rem;
     line-height: 1;
@@ -136,7 +136,7 @@
 
 /*---GRID---*/
 
-.grid{
+.grid {
     padding: 6rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -147,7 +147,7 @@
     gap: 2rem;
 }
 
-.grid_item{
+.grid_item {
     border-radius: 1rem;
     background-size: cover;
     background-position: center center;
@@ -155,44 +155,44 @@
 }
 
 .grid_item h5,
-.grid_item h4{
+.grid_item h4 {
     color: white;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 300;
 }
 
-.grid_item1{
+.grid_item1 {
     grid-area: item1;
     background-image: url("../img/pizza-med-pepperoni-grid1");
     height: 400px;
 }
 
-.grid_item h5{
+.grid_item h5 {
     font-size: 1.2rem;
 }
 
-.grid_item h4{
+.grid_item h4 {
     font-size: 1.6rem;
 }
 
-.grid_item2{
+.grid_item2 {
     grid-area: item2;
     background-image: url("../img/pizza-grid2.jpg");
 }
 
-.grid_item3{
+.grid_item3 {
     grid-area: item3;
     background-image: url("../img/Pizza-grid3.webp");
 }
 
 /*---ENJOY---*/
 
-.enjoy{
+.enjoy {
     padding: 6rem;
     padding-top: 0;
 }
 
-.titles{
+.titles {
     text-align: center;
     padding-inline: 8rem;
     display: flex;
@@ -201,27 +201,27 @@
     gap: 1rem;
 }
 
-.titles h4{
+.titles h4 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 300;
     background-color: #dfc42b;
     padding: .5rem 1rem .25rem 1rem;
 }
 
-.titles h2{
+.titles h2 {
     font-family: "Alfa Slab One", serif;
     font-size: 3rem;
 }
 
-.titles p{
+.titles p {
     font-family: "Roboto Condensed", sans-serif;
 }
 
-.cards{
+.cards {
     display: flex;
 }
 
-.card{
+.card {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -229,23 +229,23 @@
     gap: 1rem;
 }
 
-.card img{
+.card img {
     width: 100%;
 }
 
-.card h4{
+.card h4 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 300;
     font-size: 2rem;
 }
 
-.card p{
+.card p {
     font-family: "Roboto Condensed", sans-serif;
     width: 65%;
     text-align: center;
 }
 
-.card a{
+.card a {
     font-family: "Alfa Slab One", serif;
     font-size: 1rem;
     background-color: #b81717;
@@ -256,25 +256,25 @@
 
 /*---EVENTS---*/
 
-.events{
+.events {
     padding: 6rem;
     padding-top: 0;
 }
 
-.inner{
+.inner {
     display: flex;
     padding: 2rem;
     box-shadow: 15px 15px 40px #cccccc;
 }
 
-.inner_left{
+.inner_left {
     padding-block: 2rem;
     padding-right: 2rem;
     flex: 1;
     position: relative;
 }
 
-.inner_left h5{
+.inner_left h5 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 300;
     font-size: 1.6rem;
@@ -282,28 +282,28 @@
     letter-spacing: 1px;
 }
 
-.inner_left h3{
+.inner_left h3 {
     font-family: "Alfa Slab One", serif;
-    font-size: 2rem ;
+    font-size: 2rem;
 }
 
-.inner_left p{
+.inner_left p {
     font-family: "Roboto Condensed", sans-serif;
     color: #4b4b4b;
     font-size: 1.1rem;
 }
 
 .inner_left,
-.inner_rigth{
+.inner_rigth {
     flex: 1.25;
     min-width: 0;
 }
 
-.inner_rigth img{
+.inner_rigth img {
     max-width: 100%;
 }
 
-.dots{
+.dots {
     display: flex;
     gap: 5px;
     position: absolute;
@@ -311,13 +311,55 @@
     left: 0;
 }
 
-.dot{
+.dot {
     width: 15px;
     height: 15px;
     background-color: #cccccc;
     border-radius: 50%;
 }
 
-.dot-y{
+.dot-y {
     background-color: #dfc42b;
 }
+
+/*---MODO OSCURO---*/
+
+.btn-group {
+    list-style: none;
+    display: flex;
+    font-size: 1.5rem;
+    gap: 2rem;
+    letter-spacing: 2px;
+}
+
+.btn-group .btn {
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #46280c;
+}
+
+.btn-group .btn:hover {
+    background-color: #f0e5e7;
+}
+
+body {
+    transition: background-color 0.7s, color 0.7s;
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: white;
+}
+
+.lista-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.span-borrar {
+    cursor: pointer;
+}
+
+

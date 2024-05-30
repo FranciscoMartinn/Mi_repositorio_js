@@ -1,8 +1,5 @@
 /*--FUNCION--*/
 
-// function saludar(nombre) {
-//     console.log("Hola, " + nombre + "!");
-// }
 const saludar = (nombre) => {
     console.log ("Hola, " + nombre + "!")
 };
@@ -46,8 +43,6 @@ const usuario1 = {
     }
 };
 
-// console.log(usuario1.edad);
-
 usuario1["edad"],
 console.log(usuario1.edad);
 
@@ -62,3 +57,17 @@ productos.push("Cebolla Caramelizada");
 console.log(productos);
 
 console.log(productos.length);
+
+/*---MODO OSCURO---*/
+
+let btnColorMode = document.querySelector("#color-mode");
+
+btnColorMode.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+        btnColorMode.innerText = "🌞"
+    } else {
+        btnColorMode.innerText = "🌙"
+    }
+})
+
