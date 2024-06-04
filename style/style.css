@@ -185,74 +185,115 @@
     background-image: url("../img/Pizza-grid3.webp");
 }
 
-/*---ENJOY---*/
 
-.enjoy {
-    padding: 6rem;
-    padding-top: 0;
-}
-
-.titles {
+.contenedor-ordenar .tituloOrdenar {
     text-align: center;
-    padding-inline: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
 }
 
-.titles h4 {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 300;
+.contenedor-ordenar .tituloOrdenar h2{
+    font-family: "Alfa Slab One", serif;
+    font-size: 2rem;
     background-color: #dfc42b;
     padding: .5rem 1rem .25rem 1rem;
 }
 
-.titles h2 {
-    font-family: "Alfa Slab One", serif;
-    font-size: 3rem;
+/*~~~CARRITO~~~*/
+
+h1,
+h2 {
+    padding: 20px;
 }
 
-.titles p {
-    font-family: "Roboto Condensed", sans-serif;
-}
-
-.cards {
-    display: flex;
+.productos {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
 }
 
 .card {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    gap: 10px;
+    background-color: #ffffff;
 }
 
 .card img {
     width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 1rem;
 }
 
-.card h4 {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
+.card-product {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    color: #191919;
+    padding: 10px;
+    
 }
 
-.card p {
-    font-family: "Roboto Condensed", sans-serif;
-    width: 65%;
-    text-align: center;
+.card-product button {
+    padding: 10px;
+    border: 1px solid #191919;
+    color: #191919;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
 }
 
-.card a {
-    font-family: "Alfa Slab One", serif;
-    font-size: 1rem;
-    background-color: #b81717;
-    padding: .75rem 1rem;
-    color: white;
-    text-decoration: none;
+.card-product button:hover {
+    background-color: #191919;
+    color: #eee;
+    box-shadow: 1px 1px 5px #474747;
+
 }
+
+.card:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    padding: 20px;
+}
+
+.card-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.carrito-footer {
+    width: 100%;
+    background-color: #eee;
+    padding: 20px;
+    color: #191919;
+}
+
+.eliminar-carrito {
+    padding: 10px;
+    background-color: rgb(255, 190, 190);
+    cursor: pointer;
+}
+
+#total {
+    padding: 20px;
+    text-align: right;
+}
+
+
+
 
 /*---EVENTS---*/
 
@@ -361,5 +402,3 @@ body.dark-mode {
 .span-borrar {
     cursor: pointer;
 }
-
-

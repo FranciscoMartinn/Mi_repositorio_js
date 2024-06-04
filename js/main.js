@@ -1,62 +1,148 @@
-/*--FUNCION--*/
+let mensaje = localStorage.getItem('mensajeLocal')
 
-const saludar = (nombre) => {
-    console.log ("Hola, " + nombre + "!")
-};
+console.log(mensaje)
 
-let nombreIngresado = prompt ("Ingresa tu nombre");
-saludar(nombreIngresado);
+/*~~~ CARRITO ~~~*/
 
+let productos = [
+    {
+        id: "k141516asdas-14151",
+        name: "Muzzarella",
+        price: 3200,
+        img: 'https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg',
+        description: "Pizza Muzzarella"
+    },
+    {
+        id: "k141516asdas-14152",
+        name: "Cebolla Caramelizada",
+        price: 4700,
+        img: 'https://www.hola.com/imagenes/cocina/recetas/20240227250035/pizza-casera-champinon-cebolla-caramelizada/1-398-719/pizza-cebolla-adobe-t.jpg?im=Resize=(680)',
+        description: "Pizza de Cebolla Caramelizada"
 
-let edad = prompt("Ingresa tu edad");
+    },
+    {
+        id: "k141516asdas-14153",
+        name: "Calabresa",
+        price: 3800,
+        img: 'https://storage.googleapis.com/fitia-api-bucket/media/images/recipe_images/1002842.jpg',
+        description: "Pizza Calabresa"
+    },
+    {
+        id: "k141516asdas-14154",
+        name: "Especial",
+        price: 4000,
+        img: 'https://images.rappi.com.ar/restaurants_background/arpizzazeta-1665697253003.jpg',
+        description: "Pizza Especial"
+    },
+    {
+        id: "k141516asdas-14155",
+        name: "Romana",
+        price: 4700,
+        img: 'https://imag.bonviveur.com/presentacion-final-de-la-pizza-romana.jpg',
+        description: "Pizza Romana"
 
-if (edad <= 10) {
-    console.log("Sos un nene, no podes ingresar, vete a jugar!");
-} else if (edad <= 18) {
-    console.log("Bienvenido jovencito, espero disfrute de PIZZA HOUSE!");
-} else if (edad <= 29) {
-    console.log("Bienvenido joven, espero disfrute de PIZZA HOUSE!");
-} else if (edad >= 30) {
-    console.log("Bienvenido señor, espero disfrute de PIZZA HOUSE!");
-};
-
-
-let cantidadPizza = parseInt(prompt("Ingrese la cantidad de pizzas que desee"));
-let x = 1;
-while (x <= cantidadPizza) {
-    let pizza = prompt("Ingrese el nombre de la pizza que desee");
-    console.log(x + ": " + pizza);
-    x = x + 1;
-};
-
-/*--OBJETO--*/
-
-const usuario1 = {
-    nombre: "Francisco",
-    apellido: "Martin",
-    edad: 21,
-    pais: "Argentina",
-    lenguajes: {
-        lenguaje1: "HTML",
-        lengujae2: "CSS",
-        lenguaje3: "JS",
+    },
+    {
+        id: "k141516asdas-14156",
+        name: "Rucala y Jamon Crudo",
+        price: 5450,
+        img: 'https://pizzasargentinas.com/wp-content/uploads/2020/12/rucula-y-jamon-crudo.jpg',
+        description: "Pizza de Rucula y Jamon Crudo"
     }
-};
+];
 
-usuario1["edad"],
-console.log(usuario1.edad);
+mostrarProductos();
+mostrarCarrito();
 
-usuario1.localidad = "General Alvear";
-console.log(usuario1);
+function mostrarProductos() {
+    let contenedor = document.querySelector('#productos');
+    let productosHTML = '';
 
-/*--ARRAY--*/
+    for (const product of productos) {
+        productosHTML += `
+        <div class="card" id=${product.id}>
+            <img src=${product.img} alt=${product.description}>
+            <div class="card-product">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <b>$${product.price}</b>
+                <button class="agregar-carrito" data-id=${product.id}>Agregar</button>
+            </div>
+        </div>
+    `;
+    }
 
-let productos = ["Muzzarella", "Especial", "Calabresa", "Rucula"];
+    contenedor.innerHTML = productosHTML;
 
-productos.push("Cebolla Caramelizada");
-console.log(productos);
+    document.querySelectorAll('.agregar-carrito').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const productoID = btn.getAttribute('data-id');
+            agregarAlCarrito(productoID);
+        });
+    });
+}
 
-console.log(productos.length);
+function agregarAlCarrito(productoID) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const products = productos.find(product => product.id === productoID);
+    const productosEnCarrito = carrito.find(p => p.id === productoID);
+
+    if (productosEnCarrito) {
+        productosEnCarrito.cantidad += 1;
+        productosEnCarrito.totalPrice = productosEnCarrito.cantidad * productosEnCarrito.price;
+    } else {
+        carrito.push({
+            id: productoID,
+            name: products.name,
+            price: products.price,
+            cantidad: 1,
+            totalPrice: products.price
+        });
+    }
+
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    mostrarCarrito();
+}
+
+function mostrarCarrito() {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    let contenedorCarrito = document.querySelector('#contenedor-carrito');
+    let footer = document.querySelector('#total');
+    let carritoHTML = '';
+
+    for (const p of carrito) {
+        carritoHTML += `
+        <div class="card-carrito" id=${p.id}>
+            <h3>${p.name}</h3>
+            <p>$${p.price}</p>
+            <p>Cantidad: ${p.cantidad}</p>
+            <p>Total: $${p.totalPrice}</p>
+            <button class="eliminar-carrito" data-id=${p.id}>Eliminar</button>
+        </div>
+        `;
+    }
+
+    contenedorCarrito.innerHTML = carritoHTML;
+
+    document.querySelectorAll('.eliminar-carrito').forEach(btn => {
+        btn.addEventListener('click', () => {
+            let btnDelete = btn.getAttribute('data-id');
+            eliminarDelCarrito(btnDelete);
+        });
+    });
+
+    let totalCarrito = carrito.reduce((acc, p) => acc + p.totalPrice, 0);
+
+    footer.innerHTML = `Total: $${totalCarrito}`
+}
+
+function eliminarDelCarrito(deleteID) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const nuevoCarrito = carrito.filter(p => p.id !== deleteID);
+
+    localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
+    mostrarCarrito();
+}
 
 /*---MODO OSCURO---*/
 
