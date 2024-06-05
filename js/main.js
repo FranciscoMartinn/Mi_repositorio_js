@@ -1,7 +1,3 @@
-// let mensaje = localStorage.getItem('mensajeLocal')
-
-// console.log(mensaje)
-
 /*~~~ CARRITO ~~~*/
 
 let productos = [
