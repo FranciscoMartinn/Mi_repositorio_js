@@ -1,6 +1,6 @@
-let mensaje = localStorage.getItem('mensajeLocal')
+// let mensaje = localStorage.getItem('mensajeLocal')
 
-console.log(mensaje)
+// console.log(mensaje)
 
 /*~~~ CARRITO ~~~*/
 
