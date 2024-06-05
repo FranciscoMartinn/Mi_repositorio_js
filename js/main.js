@@ -48,6 +48,35 @@ let productos = [
         price: 5450,
         img: 'https://pizzasargentinas.com/wp-content/uploads/2020/12/rucula-y-jamon-crudo.jpg',
         description: "Pizza de Rucula y Jamon Crudo"
+    },
+    {
+        id: "k141516asdas-14157",
+        name: "Doble Muzza",
+        price: 3800,
+        img: 'https://lighthouseco.work/web/image/product.template/294/image_1024?unique=5aef38c',
+        description: "Pizza Doble Muzzarella"
+    },
+    {
+        id: "k141516asdas-14158",
+        name: "Hawaiana",
+        price: 4000,
+        img: 'https://assets.unileversolutions.com/recipes-v2/244028.jpg',
+        description: "Pizza de Jamon y Ananá"
+    },
+    {
+        id: "k141516asdas-14159",
+        name: "Napo",
+        price: 4000,
+        img: 'https://pizzeriaciao.es/wp-content/uploads/2020/03/BLOG-RECETA-PIZZA-MARGARITA-MAR17-800x600-1.jpg.webp',
+        description: "Pizza Napolitana"
+
+    },
+    {
+        id: "k141516asdas-141510",
+        name: "Pizza de Aceitunas",
+        price: 5000,
+        img: 'https://media-cdn.tripadvisor.com/media/photo-s/05/f7/37/2e/gondola-pizza.jpg',
+        description: "Pizza de Aceitunas Negras"
     }
 ];
 
