@@ -193,7 +193,7 @@
     align-items: center;
 }
 
-.contenedor-ordenar .tituloOrdenar h2{
+.contenedor-ordenar .tituloOrdenar h2 {
     font-family: "Alfa Slab One", serif;
     font-size: 2rem;
     background-color: #dfc42b;
@@ -236,7 +236,7 @@ h2 {
     align-items: flex-start;
     color: #191919;
     padding: 10px;
-    
+
 }
 
 .card-product button {

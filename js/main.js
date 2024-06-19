@@ -1,6 +1,6 @@
 /*~~~ CARRITO ~~~*/
 
-let productos = [
+const productos = [
     {
         id: "k141516asdas-14151",
         name: "Muzzarella",
@@ -80,7 +80,7 @@ mostrarProductos();
 mostrarCarrito();
 
 function mostrarProductos() {
-    let contenedor = document.querySelector('#productos');
+    const contenedor = document.querySelector('#productos');
     let productosHTML = '';
 
     for (const product of productos) {
@@ -182,3 +182,18 @@ btnColorMode.addEventListener("click", () => {
     }
 })
 
+/*---TOASTIFY---*/
+
+    Toastify({
+        text: "Bienvenido a PIZZA HOUSE",
+        duration: 5000,
+        newWindow: true,
+        close: true,
+        gravity: "top", 
+        position: "center", 
+        stopOnFocus: true, 
+        style: {
+        background: "linear-gradient(to right, #000000, #c53f0b)",
+        },
+        onClick: function(){} 
+    }).showToast();
